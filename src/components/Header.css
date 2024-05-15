@@ -1,0 +1,216 @@
+.main-menu,
+.divider {
+  display: none;
+}
+.mobile-menu-open {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  grid-template-columns: 60% 40%;
+
+  height: 100vh;
+  width: 100%;
+
+  z-index: 2;
+}
+.menu-div {
+  width: 100%;
+  max-width: 250px;
+  background-color: var(--background);
+  display: grid;
+  row-gap: 16px;
+  align-content: start;
+
+  padding: 16px;
+  z-index: 3;
+}
+.transparent-div {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(220, 13%, 13%, 70%);
+}
+
+.close-menu-button {
+  height: 36px;
+  width: 36px;
+  background-image: url("../assets/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  background-color: var(--background);
+  margin-bottom: 32px;
+  margin-left: 16px;
+}
+.main-menu-link {
+  font-size: clamp(12px, 5vw, 20px);
+  color: var(--main-text);
+  font-weight: 700;
+  height: 40px;
+  margin-left: 24px;
+  width: auto;
+}
+.mobile-menu-open > .main-menu-link:hover {
+  color: var(--main-text);
+  text-decoration: none;
+  text-underline-offset: none;
+}
+header {
+  width: 100%;
+  display: grid;
+  height: 68px;
+  grid-template-columns: 11% calc(100% - 44% - 16px) 11% 11% 11%;
+  column-gap: 4px;
+  align-items: center;
+  padding: 16px;
+}
+header > button {
+  border: 0;
+  background-color: var(--background);
+  padding: 4px;
+  cursor: pointer;
+  width: 36px;
+  justify-self: center;
+}
+.icon-cart {
+  justify-self: center;
+}
+.cart-length {
+  position: relative;
+  top: -32px;
+  left: 12px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  max-width: 18px;
+  height: auto;
+  aspect-ratio: 1 / 0.8;
+  background-color: var(--primary);
+  border-radius: 50%;
+  color: var(--background);
+  font-size: 8px;
+  font-weight: 600;
+}
+.icon-heart {
+  width: clamp(12px, 6vw, 24px);
+  justify-self: center;
+}
+.img-avatar {
+  width: 6.4vw;
+  height: auto;
+  max-width: 50px;
+  min-width: 32px;
+  justify-self: center;
+}
+.logoLink {
+  padding: 4px;
+  width: auto;
+  justify-self: left;
+}
+
+@media only screen and (min-width: 700px) {
+  .icon-menu-button,
+  .mobile-menu-open,
+  .transparent-div,
+  .close-menu-button {
+    display: none;
+  }
+
+  header {
+    height: 115px;
+    grid-template-columns: 146px calc(100% - 145px - 146px) 45px 45px 55px;
+    justify-items: center;
+
+    /* padding: 16px;*/
+    column-gap: 0;
+    width: clamp(700px, 80%, 1500px);
+    /* max-width: 1180px;*/
+  }
+  .main-menu {
+    width: 100%;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: 100% 0;
+    justify-self: left;
+    background-color: aqua;
+    margin-left: clamp(6px, 1vw, 36px);
+  }
+  .menu-div {
+    width: 100%;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    justify-self: left;
+    align-content: center;
+    padding: 0px;
+    row-gap: 0;
+    column-gap: clamp(4px, 1vw, 32px);
+
+    /*width: 100%;
+    max-width: 250px;
+    background-color: var(--background);
+  
+  }/*
+  .main-menu-link {
+    color: var(--secondary-text);
+    background-color: aquamarine;
+    /*   text-underline-offset: 8px;
+    text-decoration: var(--pale-prymary);
+    transition: all 300ms;*/
+  }
+  .main-menu-link {
+    margin-left: 0px;
+    font-size: clamp(12px, 1.8vw, 20px);
+    font-weight: 400;
+    align-content: center;
+
+    color: var(--secondary-text);
+
+    /*   text-underline-offset: 8px;
+    text-decoration: var(--pale-prymary);
+    transition: all 300ms;*/
+  }
+
+  .main-menu-link:hover {
+    color: var(--main-text);
+    text-decoration: underline var(--primary) 3px;
+    text-underline-offset: 49px;
+  }
+  .logo:hover {
+    filter: invert(50%) sepia(79%) saturate(658%) hue-rotate(340deg)
+      brightness(99%) contrast(95%);
+  }
+  .img-avatar:hover {
+    transform: scale(1.1);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+  }
+  .icon-cart:hover {
+    filter: brightness(50%);
+    transform: scale(1.2);
+  }
+  .icon-heart:hover {
+    filter: brightness(90%) saturate(700%);
+    transform: scale(1.2);
+  }
+  .divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-color-text);
+    width: clamp(700px, 80%, 1180px);
+  }
+}
+@media only screen and (min-width: 1100px) {
+  header {
+    grid-template-columns: 170px calc(100% - 180px - 170px) 60px 60px 70px;
+  }
+  .menu-div {
+    column-gap: clamp(4px, 2vw, 32px);
+  }
+}

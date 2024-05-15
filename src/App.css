@@ -1,0 +1,27 @@
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /*- Weights: 400, 700*/
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+}
+main {
+  overflow: hidden;
+}
+@media only screen and (min-width: 500px) {
+  main {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+  }
+  .main-div {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .main-div {
+    width: clamp(300px, 80%, 1500px);
+    max-width: 1500px;
+  }
+}

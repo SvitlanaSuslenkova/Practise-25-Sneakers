@@ -1,0 +1,307 @@
+.desktop-images-container {
+  display: none;
+}
+.close-desktop-button {
+  display: none;
+}
+.display-none {
+  display: none;
+}
+.thumb-size-images {
+  display: none;
+}
+.main-image-container-desktop,
+.main-image-container {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 0.8;
+  overflow: hidden;
+  /*display: block;
+  width: 100%;
+
+  /* overflow: hidden;*/
+}
+.product-image {
+  align-self: center;
+  width: 100%;
+  height: auto;
+}
+.product-container-text-part {
+  color: var(--main-text);
+  padding: clamp(24px, 3.5vw, 56px);
+}
+.company-name {
+  color: var(--primary);
+  text-transform: uppercase;
+  /* font-size: 3vw;*/
+  font-weight: 700;
+  font-size: clamp(12px, 3vw, 22px);
+  letter-spacing: 1px;
+  margin-bottom: clamp(16px, 3.5vw, 24px);
+}
+.product-name {
+  font-size: clamp(14px, 7.5vw, 42px);
+  margin-bottom: clamp(16px, 3.5vw, 24px);
+}
+.description {
+  color: var(--secondary-text);
+  font-size: clamp(12px, 4vw, 18px);
+  line-height: 150%;
+  margin-bottom: clamp(16px, 3.5vw, 24px);
+}
+.sizes-available {
+  font-size: clamp(12px, 5vw, 18px);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.error-select-size {
+  color: var(--primary);
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-size: clamp(12px, 5vw, 20px);
+  animation-name: error-no-size;
+  animation-duration: 1s;
+  text-align: left;
+  transform-origin: center left;
+}
+@keyframes error-no-size {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.choose-size-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  margin-bottom: 24px;
+}
+
+.size-number-button {
+  width: 100%;
+  max-width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border-radius: 0.5em;
+  border: 1px solid var(--light-color-text);
+  color: var(--main-text);
+  font-size: clamp(12px, 4vw, 18px);
+  font-weight: 700;
+}
+.prices-div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 25% 15% auto;
+  grid-template-rows: auto;
+  margin-bottom: 24px;
+}
+.price-now {
+  font-size: clamp(12px, 5.7vw, 32px);
+  font-weight: 700;
+}
+.discount {
+  padding: 4px 8px;
+  font-size: clamp(12px, 4vw, 18px);
+  font-weight: 700;
+  color: var(--primary);
+  background-color: var(--pale-primary);
+  text-align: center;
+  border-radius: 0.3em;
+  justify-self: left;
+  margin-left: 8px;
+}
+.original-price {
+  color: var(--light-color-text);
+  text-decoration: line-through;
+  text-align: right;
+  font-weight: 700;
+  font-size: clamp(12px, 4vw, 18px);
+}
+.previous-and-next-icons {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border: 0;
+  border-radius: 50%;
+  width: clamp(32px, 10.6vw, 56px);
+  aspect-ratio: 1 / 1;
+  background: var(--background);
+  z-index: 4;
+}
+.disabled-next-prev {
+  filter: brightness(5);
+  cursor: default;
+}
+.previous-icon {
+  position: absolute;
+  top: calc(40vw + 68px - 20px);
+  left: clamp(8px, 4.27vw, 16px);
+}
+.next-icon {
+  position: absolute;
+  top: calc(40vw + 68px - 20px);
+  right: clamp(8px, 4.27vw, 16px);
+}
+.size-number-button-chosen {
+  background-color: var(--pale-primary);
+}
+
+@media only screen and (min-width: 500px) {
+  .main-image-container {
+    border-radius: 1em;
+  }
+  .previous-icon {
+    position: absolute;
+    top: 240px;
+    left: calc((100vw - 500px) / 2);
+  }
+  .next-icon {
+    position: absolute;
+    top: 240px;
+    right: calc((100vw - 500px) / 2);
+  }
+  .discount {
+    margin-left: 16px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .product-container {
+    width: 100%;
+    padding-top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: clamp(8px, 4vw, 56px);
+  }
+  .main-image-container {
+    display: none;
+  }
+
+  .desktop-images-container {
+    display: initial;
+    width: clamp(200px, 100%, 446px);
+    height: auto;
+    /* aspect-ratio: 1 / 1;*/
+    justify-self: right;
+  }
+  .product-image {
+    border-radius: 1em;
+  }
+  .product-image:hover {
+    cursor: pointer;
+    filter: brightness(105%);
+  }
+  .prices-div {
+    justify-items: left;
+    grid-template-columns: 130px auto;
+    grid-template-rows: auto 40px;
+    margin-bottom: 24px;
+  }
+  .thumb-size-images {
+    display: grid;
+    width: 100%;
+    max-width: 550px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: clamp(8px, 2vw, 30px);
+    margin-top: 16px;
+  }
+  .thumb-image {
+    width: 100%;
+    border-radius: 0.5em;
+  }
+  .thumb-image-container {
+    width: 100%;
+    height: calc(100% - 4px);
+
+    background-color: var(--background);
+    border-radius: 0.7em;
+  }
+  .thumb-image-white {
+    opacity: 0.5;
+  }
+  .thumb-image-container-active {
+    border: 3px solid var(--primary);
+  }
+  .thumb-image:hover {
+    cursor: pointer;
+    filter: brightness(115%) grayscale(20%);
+  }
+  .previous-and-next-icons:hover > .icon-next-prev-img {
+    filter: invert(50%) sepia(79%) saturate(658%) hue-rotate(340deg)
+      brightness(99%) contrast(95%);
+  }
+  .product-container-text-part {
+    width: 100%;
+    max-width: 500px;
+    justify-self: center;
+    /*padding: clamp(8px, 2vw, 56px);*/
+    padding: 0;
+  }
+  .size-number-button:hover {
+    background-color: var(--pale-primary);
+  }
+
+  .main-image-container-desktop {
+    position: absolute;
+    top: 0;
+    left: -96px;
+    z-index: 4;
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    transform: translateY(calc(50vh - 225px - 115px / 2))
+      translateX(calc(50vw - 225px + 48px));
+  }
+  .shadow-div-desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(220, 13%, 13%, 70%);
+    z-index: 3;
+  }
+  .previous-icon {
+    position: absolute;
+    top: calc(225 / 2 - 56px / 2);
+    left: calc(-56px / 2);
+  }
+  .next-icon {
+    position: absolute;
+    top: calc(225 / 2 - 56px / 2);
+    right: calc(-56px / 2);
+  }
+  .close-desktop-button {
+    display: block;
+    position: absolute;
+    right: calc((40px - 22px) / 2 * -1);
+    top: -56px;
+    width: 40px;
+    height: 40px;
+    background-color: hsl(220, 13%, 13%, 0%);
+    background-image: url("../assets/icon-close.svg");
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: center;
+    border: 0;
+    filter: brightness(100);
+  }
+  .close-desktop-button:hover {
+    filter: invert(50%) sepia(79%) saturate(658%) hue-rotate(340deg)
+      brightness(99%) contrast(95%);
+  }
+}

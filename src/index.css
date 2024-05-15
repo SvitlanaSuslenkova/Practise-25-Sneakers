@@ -1,0 +1,10 @@
+:root {
+  --primary: hsl(26, 100%, 55%);
+  --pale-primary: hsl(25, 100%, 94%);
+  --main-text: hsl(220, 13%, 13%);
+  --secondary-text: hsl(219, 9%, 45%);
+  --light-color-text: hsl(220, 14%, 75%);
+  --add-to-cart-number: hsl(223, 64%, 98%);
+  --background: hsl(0, 0%, 100%);
+  --shadow: hsl(0, 0%, 0%, 75%);
+}

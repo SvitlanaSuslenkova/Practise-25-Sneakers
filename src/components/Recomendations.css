@@ -1,0 +1,25 @@
+.recomendations-container {
+  justify-self: center;
+  max-width: 900px;
+  margin-top: 32px;
+  grid-column: 1 / span 2;
+}
+.recomendations-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 2vw;
+  margin-top: 24px;
+}
+.you-might-like {
+  font-size: clamp(12px, 5vw, 18px);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.empty-image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-color-text);
+  color: white;
+  border-radius: 1em;
+}
