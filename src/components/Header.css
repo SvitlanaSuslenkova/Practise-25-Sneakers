@@ -151,7 +151,7 @@ header > button {
     row-gap: 0;
     column-gap: clamp(4px, 1vw, 32px);
     align-items: center;
-    background-color: aqua;
+ 
   }
   .main-menu-link {
     display: block;
