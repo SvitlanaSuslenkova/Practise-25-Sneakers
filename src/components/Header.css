@@ -4,7 +4,7 @@
 }
 .mobile-menu-open {
   display: grid;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   grid-template-columns: 60% 40%;
@@ -12,7 +12,7 @@
   height: 100vh;
   width: 100%;
 
-  z-index: 2;
+  z-index: 6;
 }
 .menu-div {
   width: 100%;
@@ -135,7 +135,7 @@ header > button {
     display: grid;
     grid-template-columns: 100% 0;
     justify-self: left;
-    background-color: aqua;
+
     margin-left: clamp(6px, 1vw, 36px);
   }
   .menu-div {
@@ -150,30 +150,19 @@ header > button {
     padding: 0px;
     row-gap: 0;
     column-gap: clamp(4px, 1vw, 32px);
-
-    /*width: 100%;
-    max-width: 250px;
-    background-color: var(--background);
-  
-  }/*
-  .main-menu-link {
-    color: var(--secondary-text);
-    background-color: aquamarine;
-    /*   text-underline-offset: 8px;
-    text-decoration: var(--pale-prymary);
-    transition: all 300ms;*/
+    align-items: center;
   }
   .main-menu-link {
+    display: block;
     margin-left: 0px;
     font-size: clamp(12px, 1.8vw, 20px);
     font-weight: 400;
     align-content: center;
+    align-items: center;
+
+    padding: 5px 0px;
 
     color: var(--secondary-text);
-
-    /*   text-underline-offset: 8px;
-    text-decoration: var(--pale-prymary);
-    transition: all 300ms;*/
   }
 
   .main-menu-link:hover {
