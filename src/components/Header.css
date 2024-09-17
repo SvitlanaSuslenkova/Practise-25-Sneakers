@@ -151,6 +151,10 @@ header > button {
     row-gap: 0;
     column-gap: clamp(4px, 1vw, 32px);
     align-items: center;
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> da120dbb74f316a81a6b313e2029a3d195ff8956
   }
   .main-menu-link {
     display: block;

@@ -20,8 +20,12 @@ function SmallCartDiv() {
       ) : (
         <div className="products-in-cart">
           {wishproduct.map((cartProduct, i) => {
+<<<<<<< HEAD
             const numberItemsArray = () =>
               cartProduct.numberItems.toString().split(`,`);
+=======
+            const numberItemsArray = () => cartProduct.numberItems.toString().split(`,`);
+>>>>>>> da120dbb74f316a81a6b313e2029a3d195ff8956
             const sizeArray = () => cartProduct.size.split(`,`);
             const size = () => {
               return sizeArray().map(
