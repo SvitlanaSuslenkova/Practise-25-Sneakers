@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { deleteFromWishCart } from "../redux/wishproductList/actionCreators";
-import ProductInfo from "./ProductInfo";
-import "./SmallWishDiv.css";
-import IconDelete from "../assets/icon-delete.svg";
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { deleteFromWishCart } from '../redux/wishproductList/actionCreators';
+import ProductInfo from './ProductInfo';
+import './SmallWishDiv.css';
+import IconDelete from '../assets/icon-delete.svg';
 function SmallCartDiv() {
   const wishproduct = useSelector((state) => state.wishproduct);
   const dispatch = useDispatch();
@@ -20,12 +20,8 @@ function SmallCartDiv() {
       ) : (
         <div className="products-in-cart">
           {wishproduct.map((cartProduct, i) => {
-<<<<<<< HEAD
             const numberItemsArray = () =>
               cartProduct.numberItems.toString().split(`,`);
-=======
-            const numberItemsArray = () => cartProduct.numberItems.toString().split(`,`);
->>>>>>> da120dbb74f316a81a6b313e2029a3d195ff8956
             const sizeArray = () => cartProduct.size.split(`,`);
             const size = () => {
               return sizeArray().map(
@@ -60,7 +56,7 @@ function SmallCartDiv() {
                     (ProductInfo[cartProduct.idProduct].price *
                       ProductInfo[cartProduct.idProduct].discountPercent) /
                     100
-                  ).toFixed(2)}x${number()}` + " "}
+                  ).toFixed(2)}x${number()}` + ' '}
 
                   <span className="result-sum-of-product">
                     {`$${(
