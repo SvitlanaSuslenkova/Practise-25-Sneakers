@@ -1,12 +1,12 @@
-import { useState } from "react";
-import ProductInfo from "../components/ProductInfo";
-import AddToCartButtons from "../components/AddToCartButtons";
-import IconPrevious from "../assets/icon-previous.svg";
-import IconNext from "../assets/icon-next.svg";
-import ThumbSizeProductImg from "../components/ThumbSizeProductImg";
-import Recomendations from "../components/Recomendations";
-import SizesAvailable from "../components/SizesAvailable";
-import "./ProductPage.css";
+import { useState } from 'react';
+import ProductInfo from '../components/ProductInfo';
+import AddToCartButtons from '../components/AddToCartButtons';
+import IconPrevious from '../assets/icon-previous.svg';
+import IconNext from '../assets/icon-next.svg';
+import ThumbSizeProductImg from '../components/ThumbSizeProductImg';
+import Recomendations from '../components/Recomendations';
+import SizesAvailable from '../components/SizesAvailable';
+import './ProductPage.css';
 
 function ProductPage() {
   const [openBigImage, setOpenBigImage] = useState(false);
@@ -49,7 +49,7 @@ function ProductPage() {
     <div className="product-container">
       <div
         className={
-          openBigImage ? "main-image-container-desktop" : "main-image-container"
+          openBigImage ? 'main-image-container-desktop' : 'main-image-container'
         }
       >
         <button
@@ -59,8 +59,8 @@ function ProductPage() {
         <button
           className={
             indexImage == 0
-              ? "previous-and-next-icons previous-icon disabled-next-prev"
-              : "previous-and-next-icons previous-icon"
+              ? 'previous-and-next-icons previous-icon disabled-next-prev'
+              : 'previous-and-next-icons previous-icon'
           }
           onClick={handlePreviousImage}
           disabled={disabledPrev}
@@ -70,8 +70,8 @@ function ProductPage() {
         <button
           className={
             indexImage == ProductInfo[idProduct].images.fullSize.length - 1
-              ? "previous-and-next-icons next-icon disabled-next-prev"
-              : "previous-and-next-icons next-icon"
+              ? 'previous-and-next-icons next-icon disabled-next-prev'
+              : 'previous-and-next-icons next-icon'
           }
           onClick={handleNextImage}
           disabled={disabledNext}
@@ -90,7 +90,7 @@ function ProductPage() {
         />
       </div>
       <div
-        className={openBigImage ? "shadow-div-desktop" : "display-none"}
+        className={openBigImage ? 'shadow-div-desktop' : 'display-none'}
         onClick={handleCloseBiggerImage}
       ></div>
       <div className="desktop-images-container">
@@ -142,10 +142,11 @@ function ProductPage() {
           numberItems={numberItems}
           setNumberItems={setNumberItems}
           size={size}
-          sizeNotSelected={sizeNotSelected}
+          //sizeNotSelected={sizeNotSelected}
           setSizeNotSelected={setSizeNotSelected}
         />
       </div>
+
       <Recomendations
         idProduct={idProduct}
         setIdProduct={setIdProduct}

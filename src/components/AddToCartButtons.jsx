@@ -1,18 +1,18 @@
-import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/productLists/actionCreators";
-import { addToWishCart } from "../redux/wishproductList/actionCreators";
-import Minus from "../assets/icon-minus.svg";
-import Plus from "../assets/icon-plus.svg";
-import Cart from "../assets/icon-cart.svg";
-import Heart from "../assets/icons8-heart-48.png";
-import "./AddToCartButtons.css";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/productLists/actionCreators';
+import { addToWishCart } from '../redux/wishproductList/actionCreators';
+import Minus from '../assets/icon-minus.svg';
+import Plus from '../assets/icon-plus.svg';
+import Cart from '../assets/icon-cart.svg';
+import Heart from '../assets/icons8-heart-48.png';
+import './AddToCartButtons.css';
 
 function AddToCartButtons({
   idProduct,
   numberItems,
   setNumberItems,
   size,
-  sizeNotSelected,
+  //sizeNotSelected,
   setSizeNotSelected,
 }) {
   const dispatch = useDispatch();
