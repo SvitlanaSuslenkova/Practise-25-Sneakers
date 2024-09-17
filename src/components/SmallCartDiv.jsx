@@ -20,7 +20,9 @@ function SmallCartDiv() {
       ) : (
         <div className="products-in-cart">
           {product.map((cartProduct, i) => {
-            const numberItemsArray = () => cartProduct.numberItems.split(`,`);
+            const numberItemsArray = () =>
+              cartProduct.numberItems.toString().split(`,`);
+            console.log(typeof cartProduct.numberItems);
             const sizeArray = () => cartProduct.size.split(`,`);
             const size = () => {
               return sizeArray().map(
